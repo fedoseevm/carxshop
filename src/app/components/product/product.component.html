@@ -1,0 +1,22 @@
+<div class="card">
+  <img [src]="product.img" class="card-img-top" [alt]="product.modelname">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.modelname }}</h5>
+    <h6 class="card-subtitle mb-1 text-muted">{{ product.manufacturer }}</h6>
+    <!-- <div class="details" *ngIf="details"> -->
+      <p class="card-text mb-1"><b>Year:</b> {{ product.year }} </p>
+      <p class="card-text mb-1"><b>Horsepower:</b> {{ product.horsepower }} </p>
+      <p class="card-text mb-1"><b>Fuel type:</b> {{ product.fueltype }} </p>
+    <!-- </div> -->
+    <h4 class="card-title"><b>{{ product.price | currency}}</b></h4>
+    <a routerLink="/car-purchase" (click)="setCar(product)" href="#" class="btn btn-warning me-4">Buy it!</a>
+    <!-- <a class="btn"
+    [ngClass]="{
+      'btn-danger': details,
+      'btn-info': !details
+    }"
+    (click)="details = !details"
+    >
+    {{ details ? 'Less' : 'More' }} Info</a> -->
+  </div>
+</div> 

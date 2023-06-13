@@ -1,0 +1,36 @@
+footer {
+    box-shadow: 0em 0em 0.5em rgb(95, 95, 95);
+}
+
+img {
+    width: 100px;
+}
+
+@media screen and (min-width: 992px) {
+    img {
+        width: 200px;
+    }
+
+    .container-fluid {
+        flex-direction: column;
+    }   
+
+    .navbar .navbar-nav {
+        border-top: 2px solid white;
+        padding-right: 14rem;
+        padding-left: 14rem;
+    }
+}
+
+.footer-logo {
+    border-top: 2px solid white;
+}
+
+.nav .nav-item .nav-link {
+    font-size: 1.3em;
+    color: #a9a9a9;
+}
+
+.nav .nav-item .nav-link:hover {
+    color: #ffffff;
+}

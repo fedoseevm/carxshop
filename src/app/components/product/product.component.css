@@ -1,0 +1,9 @@
+.card {
+    box-shadow: 0em -0.1em 0.6em rgb(210, 210, 210);
+}
+
+.card-img-top {
+    width: inherit;
+    height: 10em;
+    object-fit: cover;
+}

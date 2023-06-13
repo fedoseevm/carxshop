@@ -1,0 +1,50 @@
+<section class="search-bar sticky-top">
+    <div class="container-lg py-3 py-lg-4">
+      <div class="row g-lg-5">
+        <div class="col-6 col-lg-8 col-md-8 col-sm-6">
+          <div class="input-group">
+            <label for="car-search" class="form-label my-auto mr-5 d-none d-lg-block" style="margin-right: 1em">Search:</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Manufacturer or model" 
+            id="car-search" 
+            aria-label="search-for-car" 
+            aria-describedby="search-for-car"
+            [(ngModel)]="term"
+            >
+          </div>
+        </div>
+        <div class="col-6 col-lg-4 col-md-4 col-sm-6">
+          <div class="input-group">
+            <label for="SortBy" class="form-label my-auto me-1 me-lg-3" style="margin-right: 1em">Manufacturer:</label>
+            <select 
+            class="form-select" 
+            aria-label="SortBy" 
+            id="SortBy" 
+            [(ngModel)]="selectedManufacturer"
+            (change)="filterCarsByManufacturer()"
+            >
+              <option [value]="''" selected>All manufacturers</option>
+              <option 
+              *ngFor="let manufacturer of manufacturers" [value]="manufacturer">{{ manufacturer }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<div class="container pb-5">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 py-5 px-5 mx-auto g-3"
+    *ngIf="(cars$ | async) as cars"
+    >
+        <div *ngIf="loading" class="spinner-border col mx-auto" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <app-product 
+        class="col" 
+        *ngFor="let car of cars | filterCars: term; let i = index" 
+        [product]="car"
+        ></app-product>
+    </div>
+</div>

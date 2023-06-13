@@ -1,0 +1,50 @@
+#page {
+    box-shadow: 0 0 4em rgb(190, 190, 190);
+}
+    
+img {
+    box-shadow: 0 0 0.8em rgb(180, 180, 180);
+}
+
+.details {
+    font-size: 1.6em;
+}
+
+.details.title {
+    font-size: 1.8em;
+}
+
+.purchase-block {
+    font-size: 1.5em;
+}
+
+.input-group {
+    box-shadow: 0 0 0.5em rgb(227, 227, 227);
+}
+
+.input-group-text {
+    background-color: rgb(220, 220, 220);
+}
+
+.input-group-text, .form-control {
+    font-size: 0.8em;
+}
+
+.invalid {
+    border: 2px solid rgb(255, 167, 167);
+    background-color: rgb(255, 205, 205);
+}
+
+#signature-canvas {
+    border: 1px solid #000;
+    border-radius: 0.3em;
+  }
+
+.validation-error {
+    font-size: 0.6em;
+    color: red;
+}
+
+#purchase {
+    box-shadow: 0 0 0.6em rgb(175, 175, 175);
+}

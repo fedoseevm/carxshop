@@ -1,0 +1,15 @@
+<div
+*ngIf="errorService.error$ | async as error"
+class="container-fluid py-3 bg-danger text-center text-white"
+>
+    <div class="row">
+        <div class="col-11">
+            {{ error }}
+        </div>
+        <div class="col-1 mx-auto">
+            <button class="btn btn-close btn-close-white"
+            (click)="errorService.clear()">
+            </button>
+        </div>
+    </div>
+</div>
