@@ -14,7 +14,7 @@ export class CarService {
     ) {}
 
     getAllCars(): Observable<IProduct[]> {
-        return this.http.get<IProduct[]>('https://infstudy.github.io/Cars-database/db-github.json', {
+        return this.http.get<IProduct[]>('https://fedoseevm.github.io/Cars-database/db-github.json', {
             // params: new HttpParams().append('_limit', 5)
         }).pipe(
             delay(0),
